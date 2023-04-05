@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="USz-Nf-R4A">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="RmH-UK-qkh">
+            <objects>
+                <viewController id="USz-Nf-R4A" customClass="ViewController" customModule="CallBlockKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etl-Qt-HdY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wqz-yR-7zf">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="차단하고 싶은 번호의 앞자리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCN-K5-IWU">
+                                <rect key="frame" x="101.66666666666667" y="108" width="189.66666666666663" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입력한 번호 + 0000~9999번까지의 모든 번호가 차단 됩니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZe-KO-pew">
+                                <rect key="frame" x="20" y="138.33333333333334" width="353" height="14.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설치 후 설정 &gt; 전화 &gt; 전화 차단 및 발신자 확인 &gt; SampleCallKit 허용 필수" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSa-iW-IVO">
+                                <rect key="frame" x="20" y="769.33333333333337" width="353" height="28.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QI0-te-bXI">
+                                <rect key="frame" x="20" y="192.66666666666666" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="JAV-2L-4m1">
+                                <rect key="frame" x="29" y="255.66666666666666" width="335" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-Bh-qQB">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="전화 차단"/>
+                                        <connections>
+                                            <action selector="onTouchAdd:" destination="USz-Nf-R4A" eventType="touchUpInside" id="KX4-2k-QFj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGA-8t-rL3">
+                                        <rect key="frame" x="201.66666666666663" y="0.0" width="133.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="전화 차단 해제"/>
+                                        <connections>
+                                            <action selector="onTouchRemove:" destination="USz-Nf-R4A" eventType="touchUpInside" id="enq-wj-Hh3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alignment="center" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-1U-jGH">
+                                <rect key="frame" x="20" y="354.66666666666669" width="353" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOq-z7-G8y">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="문자 차단"/>
+                                        <connections>
+                                            <action selector="onTouchMessageBlock:" destination="USz-Nf-R4A" eventType="touchUpInside" id="ec2-zT-o2u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeF-ul-lyd">
+                                        <rect key="frame" x="210.66666666666663" y="0.0" width="142.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="문자 차단 해제"/>
+                                        <connections>
+                                            <action selector="onTouchMessageRemove:" destination="USz-Nf-R4A" eventType="touchUpInside" id="Ogf-FM-rQt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hhD-cw-cVF"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wqz-yR-7zf" firstAttribute="centerX" secondItem="etl-Qt-HdY" secondAttribute="centerX" id="1GL-jv-kD4"/>
+                            <constraint firstItem="A6w-1U-jGH" firstAttribute="leading" secondItem="hhD-cw-cVF" secondAttribute="leading" constant="20" id="2kL-Yc-t21"/>
+                            <constraint firstItem="zZe-KO-pew" firstAttribute="leading" secondItem="hhD-cw-cVF" secondAttribute="leading" constant="20" id="7E9-q8-Rje"/>
+                            <constraint firstItem="zZe-KO-pew" firstAttribute="top" secondItem="JCN-K5-IWU" secondAttribute="bottom" constant="10" id="DI7-ag-geM"/>
+                            <constraint firstItem="QI0-te-bXI" firstAttribute="top" secondItem="zZe-KO-pew" secondAttribute="bottom" constant="40" id="EHv-Qa-EEw"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="trailing" secondItem="gSa-iW-IVO" secondAttribute="trailing" constant="20" id="GGB-17-Xvb"/>
+                            <constraint firstItem="A6w-1U-jGH" firstAttribute="top" secondItem="JAV-2L-4m1" secondAttribute="bottom" constant="64.5" id="IHm-QL-pHJ"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="bottom" secondItem="gSa-iW-IVO" secondAttribute="bottom" constant="20" id="JHS-Sf-gy6"/>
+                            <constraint firstItem="QI0-te-bXI" firstAttribute="leading" secondItem="hhD-cw-cVF" secondAttribute="leading" constant="20" id="Lkz-QL-AUA"/>
+                            <constraint firstItem="JCN-K5-IWU" firstAttribute="centerX" secondItem="etl-Qt-HdY" secondAttribute="centerX" id="Mfz-ml-1vT"/>
+                            <constraint firstItem="JCN-K5-IWU" firstAttribute="top" secondItem="hhD-cw-cVF" secondAttribute="top" constant="49" id="Q1d-Ik-hcr"/>
+                            <constraint firstItem="JAV-2L-4m1" firstAttribute="leading" secondItem="hhD-cw-cVF" secondAttribute="leading" constant="29" id="cEv-fA-FU5"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="trailing" secondItem="QI0-te-bXI" secondAttribute="trailing" constant="20" id="cjZ-bh-KBh"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="trailing" secondItem="A6w-1U-jGH" secondAttribute="trailing" constant="20" id="djt-WC-ep9"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="trailing" secondItem="JAV-2L-4m1" secondAttribute="trailing" constant="29" id="dtZ-LD-35l"/>
+                            <constraint firstItem="gSa-iW-IVO" firstAttribute="leading" secondItem="hhD-cw-cVF" secondAttribute="leading" constant="20" id="gnp-lT-wKt"/>
+                            <constraint firstItem="hhD-cw-cVF" firstAttribute="trailing" secondItem="zZe-KO-pew" secondAttribute="trailing" constant="20" id="mhB-6M-Kjj"/>
+                            <constraint firstItem="wqz-yR-7zf" firstAttribute="centerY" secondItem="etl-Qt-HdY" secondAttribute="centerY" id="sBu-Mu-vkY"/>
+                            <constraint firstItem="JAV-2L-4m1" firstAttribute="top" secondItem="QI0-te-bXI" secondAttribute="bottom" constant="29" id="wZV-2O-JIm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressbar" destination="wqz-yR-7zf" id="sWn-qp-WSQ"/>
+                        <outlet property="textField" destination="QI0-te-bXI" id="6rk-Ik-4D1"/>
+                        <outlet property="viewLabel" destination="JCN-K5-IWU" id="COR-cf-fOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bP-2Z-4Ul" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="-69"/>
+        </scene>
+    </scenes>
+</document>
